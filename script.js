@@ -41,11 +41,11 @@ function validateConfig() {
 
 function getDefaultColor(key) {
   const defaults = {
-    backgroundStart: "#ffafbd",
-    backgroundEnd: "#ffc3a0",
-    buttonBackground: "#ff6b6b",
-    buttonHover: "#ff8787",
-    textColor: "#ff4757",
+    backgroundStart: "#fff0f5",
+    backgroundEnd: "#ffe4e9",
+    buttonBackground: "#e91e63",
+    buttonHover: "#f06292",
+    textColor: "#d81b60",
   };
   return defaults[key];
 }
@@ -62,35 +62,27 @@ window.addEventListener("load", () => {
 document.addEventListener("DOMContentLoaded", () => {
   validateConfig();
 
-  // Set page title
   document.title = config.pageTitle;
 
-  // Set texts from config
   setPageContent();
 
-  // Create floating elements
   createFloatingElements();
 
-  // Setup music player
   setupMusicPlayer();
 
-  // Setup event listeners
   setupEventListeners();
 
-  // Initialize love meter
   initializeLoveMeter();
 });
 
 // Set page content from config
 function setPageContent() {
-  // Title
   const titleElement = document.getElementById("valentineTitle");
   titleElement.innerHTML = `
         <span class="title-line">${config.valentineName},</span>
         <span class="title-line">tình yêu của anh...</span>
     `;
 
-  // Question 1
   document.getElementById("question1Text").textContent =
     config.questions.first.text;
   document.getElementById("yesBtn1").querySelector(".btn-text").textContent =
@@ -102,7 +94,6 @@ function setPageContent() {
     .querySelector(".btn-text").textContent =
     config.questions.first.secretAnswer;
 
-  // Question 2
   document.getElementById("question2Text").textContent =
     config.questions.second.text;
   document.getElementById("startText").textContent =
@@ -110,7 +101,6 @@ function setPageContent() {
   document.getElementById("nextBtn").querySelector(".btn-text").textContent =
     config.questions.second.nextBtn;
 
-  // Question 3
   const q3Text = config.questions.third.text;
   const dateParts = q3Text.match(/\((.*?)\)/);
   const questionWithoutDate = q3Text.replace(/\s*\(.*?\)\s*/, "");
@@ -125,7 +115,6 @@ function setPageContent() {
   document.getElementById("noBtn3").querySelector(".btn-text").textContent =
     config.questions.third.noBtn;
 
-  // Celebration
   document.getElementById("celebrationTitle").innerHTML =
     config.celebration.title.replace(/\n/g, "<br>");
   document.getElementById("celebrationMessage").innerHTML =
@@ -138,7 +127,6 @@ function setPageContent() {
 function createFloatingElements() {
   const container = document.querySelector(".floating-elements");
 
-  // Create hearts
   config.floatingEmojis.hearts.forEach((heart, index) => {
     setTimeout(() => {
       const div = document.createElement("div");
@@ -149,7 +137,6 @@ function createFloatingElements() {
     }, index * 200);
   });
 
-  // Create bears
   config.floatingEmojis.bears.forEach((bear, index) => {
     setTimeout(
       () => {
@@ -164,7 +151,6 @@ function createFloatingElements() {
   });
 }
 
-// Set random position for floating elements
 function setRandomPosition(element) {
   element.style.left = Math.random() * 100 + "vw";
   element.style.animationDelay = Math.random() * 5 + "s";
@@ -173,44 +159,34 @@ function setRandomPosition(element) {
 
 // Setup event listeners
 function setupEventListeners() {
-  // Yes button 1
-  //   document.getElementById("yesBtn1").addEventListener("click", () => {
-  //     showNextQuestion(2);
-  //   });
   document.getElementById("yesBtn1").addEventListener("click", function (e) {
     e.preventDefault();
     moveButton(this);
   });
 
-  // No button 1 - runs away
   document.getElementById("noBtn1").addEventListener("click", function (e) {
     e.preventDefault();
     moveButton(this);
   });
 
-  // Secret answer button
   document.getElementById("secretAnswerBtn").addEventListener("click", () => {
     showNextQuestion(2);
   });
 
-  // Next button
   document.getElementById("nextBtn").addEventListener("click", () => {
     showNextQuestion(3);
   });
 
-  // Yes button 3 - celebration
   document.getElementById("yesBtn3").addEventListener("click", () => {
     celebrate();
   });
 
-  // No button 3 - runs away
   document.getElementById("noBtn3").addEventListener("click", function (e) {
     e.preventDefault();
     moveButton(this);
   });
 }
 
-// Function to show next question with smooth transition
 function showNextQuestion(questionNumber) {
   const allQuestions = document.querySelectorAll(".question-section");
 
@@ -224,7 +200,6 @@ function showNextQuestion(questionNumber) {
   }, 300);
 }
 
-// Function to move button (for "No" buttons)
 function moveButton(button) {
   const container = document.querySelector(".container");
   const containerRect = container.getBoundingClientRect();
@@ -253,7 +228,6 @@ function moveButton(button) {
   button.style.top = newY + "px";
   button.style.transition = "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
 
-  // Add shake animation
   button.style.animation = "shake 0.5s";
   setTimeout(() => {
     button.style.animation = "";
@@ -267,7 +241,6 @@ function initializeLoveMeter() {
   const extraLove = document.getElementById("extraLove");
   const sliderProgress = document.getElementById("sliderProgress");
 
-  // Set initial value
   loveMeter.value = 100;
   loveValue.textContent = 100;
   updateSliderProgress(100);
@@ -305,22 +278,18 @@ function updateSliderProgress(value) {
 
 // Celebration function
 function celebrate() {
-  // Hide all questions
   document.querySelectorAll(".question-section").forEach((q) => {
     q.classList.remove("active");
   });
 
-  // Show celebration
   setTimeout(() => {
     const celebration = document.getElementById("celebration");
     celebration.classList.add("active");
 
-    // Trigger confetti
     if (typeof startConfetti === "function") {
       startConfetti();
     }
 
-    // Create heart explosion
     createHeartExplosion();
   }, 300);
 }

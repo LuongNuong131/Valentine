@@ -4,10 +4,10 @@
 
 const CONFIG = {
   // Tên người ấy (sẽ hiện trên tiêu đề)
-  valentineName: "Trúc My",
+  valentineName: "Chúc Mieee",
 
   // Tiêu đề trên tab trình duyệt
-  pageTitle: "Làm Valentine của anh nha? 💝",
+  pageTitle: "Làm Cục Dàng của anh nha? 💝",
 
   // Các icon bay bay nền (có thể thêm bớt tùy thích)
   floatingEmojis: {
@@ -21,7 +21,6 @@ const CONFIG = {
       text: "Bé có yêu anh hông?",
       yesBtn: "Dạ có ❤️",
       noBtn: "Hông 🥺",
-      // Nút mờ ở góc dưới - khi click cũng chuyển sang câu hỏi tiếp theo
       secretAnswer: "Hông yêu... mà là THƯƠNG lắm lắm! ❤️",
     },
     second: {
@@ -30,7 +29,7 @@ const CONFIG = {
       nextBtn: "Tiếp theo ❤️",
     },
     third: {
-      text: "Vậy... làm Valentine của anh nha? (14/02/2026) 🌹",
+      text: "Vậy... đi cùng anh đến cuối đời nha? (14/02/2026) 🌹",
       yesBtn: "Đồng ý lun!",
       noBtn: "Để suy nghĩ...",
     },
@@ -51,13 +50,13 @@ const CONFIG = {
     emojis: "🎁💖🤗💝💋❤️💕",
   },
 
-  // Màu sắc giao diện (tông hồng pastel ngọt ngào)
+  // Màu sắc giao diện
   colors: {
-    backgroundStart: "#ffafbd",
-    backgroundEnd: "#ffc3a0",
-    buttonBackground: "#ff6b6b",
-    buttonHover: "#ff8787",
-    textColor: "#ff4757",
+    backgroundStart: "#ffe0f0",
+    backgroundEnd: "#ffd4e5",
+    buttonBackground: "#ff1744",
+    buttonHover: "#ff5252",
+    textColor: "#c2185b",
   },
 
   // Cấu hình hiệu ứng động
@@ -72,13 +71,11 @@ const CONFIG = {
   music: {
     enabled: true,
     autoplay: true,
-    musicUrl:
-      "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3",
+    musicUrl: "Beautiful in white.mp3",
     startText: "🎵 Bật nhạc",
     stopText: "🔇 Tắt nhạc",
     volume: 0.5,
   },
 };
 
-// Đừng sửa dòng dưới này nhé
 window.VALENTINE_CONFIG = CONFIG;

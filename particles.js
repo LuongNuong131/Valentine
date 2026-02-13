@@ -10,10 +10,8 @@
   let windowHalfY = window.innerHeight / 2;
 
   function init() {
-    // Scene
     scene = new THREE.Scene();
 
-    // Camera
     camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -22,7 +20,6 @@
     );
     camera.position.z = 1000;
 
-    // Renderer
     renderer = new THREE.WebGLRenderer({
       canvas: canvas,
       alpha: true,
@@ -31,14 +28,11 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    // Create particles
     createParticles();
 
-    // Event listeners
     document.addEventListener("mousemove", onMouseMove, false);
     window.addEventListener("resize", onWindowResize, false);
 
-    // Start animation
     animate();
   }
 
@@ -49,7 +43,6 @@
 
     const particleCount = 800;
 
-    // Create heart shape particles
     for (let i = 0; i < particleCount; i++) {
       const x = Math.random() * 2000 - 1000;
       const y = Math.random() * 2000 - 1000;
@@ -57,7 +50,6 @@
 
       vertices.push(x, y, z);
 
-      // Pink-red color gradient
       const r = 1;
       const g = Math.random() * 0.5 + 0.4;
       const b = Math.random() * 0.5 + 0.5;
@@ -71,7 +63,6 @@
     );
     geometry.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
 
-    // Material
     const material = new THREE.PointsMaterial({
       size: 5,
       vertexColors: true,
@@ -105,17 +96,14 @@
   }
 
   function render() {
-    // Smooth camera movement based on mouse
     camera.position.x += (mouseX - camera.position.x) * 0.05;
     camera.position.y += (-mouseY - camera.position.y) * 0.05;
     camera.lookAt(scene.position);
 
-    // Rotate particles
     if (particles) {
       particles.rotation.x += 0.0005;
       particles.rotation.y += 0.0005;
 
-      // Pulse effect
       const time = Date.now() * 0.001;
       const positions = particles.geometry.attributes.position.array;
 
@@ -130,7 +118,6 @@
     renderer.render(scene, camera);
   }
 
-  // Initialize when DOM is ready
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {

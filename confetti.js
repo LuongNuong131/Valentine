@@ -7,7 +7,6 @@
   let confettiParticles = [];
   let animationId;
 
-  // Confetti colors (hearts theme)
   const colors = [
     "#ff6b6b",
     "#ff8787",
@@ -42,12 +41,10 @@
       this.x += this.speedX;
       this.rotation += this.rotationSpeed;
 
-      // Fade out near bottom
       if (this.y > canvas.height - 100) {
         this.opacity = Math.max(0, 1 - (this.y - (canvas.height - 100)) / 100);
       }
 
-      // Reset if off screen
       if (this.y > canvas.height) {
         this.reset();
       }
@@ -102,7 +99,6 @@
     createConfetti();
     animate();
 
-    // Stop after 10 seconds
     setTimeout(() => {
       stopConfetti();
     }, 10000);
@@ -116,11 +112,9 @@
     confettiParticles = [];
   }
 
-  // Make startConfetti globally available
   window.startConfetti = startConfetti;
   window.stopConfetti = stopConfetti;
 
-  // Handle window resize
   window.addEventListener("resize", () => {
     if (canvas.classList.contains("active")) {
       resizeCanvas();
