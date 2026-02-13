@@ -1,207 +1,211 @@
-# 💝 Valentine's Day Website 2026 💝
+# 💝 Valentine's Day Website 2026 - Premium Edition
 
-[![Stars](https://img.shields.io/github/stars/End2EndAI/valentine-website-2025?style=social)](https://github.com/End2EndAI/valentine-website-2025/stargazers)
-[![Fork](https://img.shields.io/github/forks/End2EndAI/valentine-website-2025?style=social)](https://github.com/End2EndAI/valentine-website-2025/fork)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Support me](https://img.shields.io/badge/Support-Stripe-blue)](https://buy.stripe.com/bJefZa8Le7fvgDe3ric7u00)
+## 🎨 Nâng cấp cao cấp cho người yêu của bạn!
 
-A beautiful, interactive Valentine's Day website generator to ask your special someone to be your Valentine! Create your own personalized version in minutes. Perfect for Valentine's Day 2026! 💝
-Follow below the tutorial how to custom the website and get your custom URL and access your website on the internet from everywhere !
+### ✨ Tính năng mới:
 
-🌟 **[Live Demo](https://end2endai.github.io/valentine-website-2025)** | 🚀 **[Quick Start](#-quick-start-guide)** | 🌐 **[Deploy Your Website](#4-make-it-live-get-your-online-website-url)**
+#### 🎭 Giao diện
 
-## 🌟 Share The Love
+- ✅ **Glassmorphism UI** - Hiệu ứng kính mờ hiện đại
+- ✅ **3D Particle Background** - Hạt 3D bay lượn theo chuột
+- ✅ **Premium Typography** - Font chữ cao cấp: Playfair Display, Quicksand, Dancing Script
+- ✅ **Loading Screen** - Màn hình chờ đẹp mắt với trái tim đập
+- ✅ **Smooth Animations** - Hiệu ứng chuyển động mượt mà
 
-If you liked it, please :
-- ⭐ Star this repository if you like it
-- 🔄 Fork it to create your own version
-- 🔥 Like and follow on instagram for more websites : [Instagram](https://www.instagram.com/reel/DFh3ZaxtrYX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+#### 🎉 Hiệu ứng
 
-## ✨ Features
-- 💖 Floating hearts and bears
-- 🎵 Custom music
-- 📏 Love meter that goes beyond 100%
-- 🏃‍♂️ Playful buttons that run away
-- 🎁 Hidden answer for the first question, "Do you like me?"
-- 🎉 Grand celebration when they say yes!
+- ✅ **Confetti Celebration** - Pháo hoa giấy khi bấm "Yes"
+- ✅ **Heart Explosion** - Mưa trái tim khi chấp nhận
+- ✅ **Button Shine Effect** - Nút bấm có hiệu ứng sáng
+- ✅ **Parallax Mouse Follow** - Background theo dõi chuột
+- ✅ **Love Meter Animation** - Thanh đo tình yêu với progress bar đẹp
 
-## 🚀 Quick Start Guide
+#### 📱 Responsive
 
-### 1. Get Your Own Copy
-1. Click the "Fork" button at the top right of this page or [click here](https://github.com/End2EndAI/valentine-website-2025/fork)
-2. Wait a few seconds while GitHub creates your copy
-3. You now have your own version of the code!
+- ✅ **Mobile Optimized** - Tối ưu cho điện thoại
+- ✅ **Tablet Friendly** - Hiển thị đẹp trên tablet
+- ✅ **Desktop Perfect** - Hoàn hảo trên màn hình lớn
 
-Note: Make sure you're logged into your GitHub account. If you don't have one, you can [create a free account here](https://github.com/signup).
+### 📦 File bao gồm:
 
-### 2. Customize for Your Valentine
+1. **index.html** - Cấu trúc HTML hiện đại
+2. **styles.css** - CSS với glassmorphism và animations
+3. **script.js** - JavaScript logic chính
+4. **particles.js** - Hiệu ứng 3D particles
+5. **confetti.js** - Hiệu ứng pháo hoa
+6. **config.js** - File cấu hình (giữ nguyên từ bản cũ)
+7. **theme.js** - File theme (giữ nguyên từ bản cũ)
 
-#### Easy Way (Recommended)
-1. In your new repository, click on `config.js`
-2. Click the pencil icon (✏️) to edit
-3. Change the values to personalize your website
-4. Click "Commit changes" at the bottom
+### 🚀 Hướng dẫn sử dụng:
 
-Here's what you can customize in `config.js`:
+#### Bước 1: Upload lên GitHub
+
+```bash
+# Tạo repository mới trên GitHub
+# Upload tất cả 7 file vào repository
+
+git init
+git add .
+git commit -m "Valentine website premium 2026"
+git branch -M main
+git remote add origin https://github.com/username/valentine-2026.git
+git push -u origin main
+```
+
+#### Bước 2: Kích hoạt GitHub Pages
+
+1. Vào **Settings** → **Pages**
+2. Chọn **main branch**
+3. Click **Save**
+4. Đợi 2-3 phút
+5. Website sẽ live tại: `https://username.github.io/valentine-2026`
+
+#### Bước 3: Tùy chỉnh (nếu cần)
+
+Chỉnh sửa file **config.js** để thay đổi:
+
+- Tên người yêu
+- Câu hỏi
+- Màu sắc
+- Nhạc nền
+- Tin nhắn
+
+### 🎯 Những điểm nổi bật:
+
+#### 1. Loading Screen chuyên nghiệp
+
+- Trái tim đập theo nhịp
+- Text "Đang chuẩn bị điều đặc biệt..."
+- Fade out mượt mà
+
+#### 2. 3D Particles Background
+
+- 800 hạt 3D màu hồng
+- Theo dõi chuyển động chuột
+- Hiệu ứng xoay và pulse
+
+#### 3. Glassmorphism Cards
+
+- Background trong suốt blur
+- Border gradient tinh tế
+- Shadow nhiều lớp
+
+#### 4. Love Meter nâng cấp
+
+- Progress bar gradient đẹp
+- Thumb button với border trắng
+- Animation smooth khi kéo
+- Text hiển thị động
+
+#### 5. Button Effects
+
+- Shine effect khi hover
+- Smooth transform
+- Ripple animation
+- Gradient backgrounds
+
+#### 6. Confetti System
+
+- 150 confetti particles
+- 7 màu gradient
+- Fade out tự nhiên
+- Tự động dừng sau 10s
+
+#### 7. Responsive Design
+
+- Breakpoints: 768px, 480px
+- Font size điều chỉnh
+- Layout stack trên mobile
+- Touch-friendly buttons
+
+### 🎨 Color Palette:
+
+```css
+Primary Pink: #ff6b6b → #ff8787
+Secondary Pink: #ffa6a6 → #ffb8b8
+Gradient Love: #f093fb → #f5576c
+Background: #ffafbd → #ffc3a0
+```
+
+### 📱 Browser Support:
+
+- ✅ Chrome 90+
+- ✅ Firefox 88+
+- ✅ Safari 14+
+- ✅ Edge 90+
+- ✅ Mobile Safari
+- ✅ Chrome Mobile
+
+### 💡 Tips:
+
+1. **Test trước khi gửi**: Kiểm tra trên nhiều thiết bị
+2. **Optimize images**: Nếu thêm ảnh, nén trước khi upload
+3. **Music**: Đảm bảo link Cloudinary hoạt động
+4. **Mobile**: Test kỹ trên điện thoại
+5. **Loading time**: Website load nhanh nhờ CDN
+
+### 🔧 Customization Guide:
+
+#### Thay đổi màu sắc:
+
 ```javascript
-// Basic Information
-valentineName: "Jade"                    // Your Valentine's name
-pageTitle: "Will You Be My Valentine? 💝" // Browser tab title
-
-// Floating Background Elements
-floatingEmojis: {
-    hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis in background
-    bears: ['🧸', '🐻']                       // Bear emojis in background
-}
-
-// Questions and Buttons
-questions: {
-    first: {
-        text: "Do you like me?",                   // First question
-        yesBtn: "Yes",                             // Yes button text
-        noBtn: "No",                               // No button text
-        secretAnswer: "I don't like you, I love you! ❤️"  // Hidden message
-    },
-    second: {
-        text: "How much do you love me?",          // Second question
-        startText: "This much!",                   // Text before percentage
-        nextBtn: "Next ❤️"                         // Next button text
-    },
-    third: {
-        text: "Will you be my Valentine...?",      // Final question
-        yesBtn: "Yes!",                            // Yes button text
-        noBtn: "No"                                // No button text
-    }
-}
-
-// Love Meter Messages
-loveMessages: {
-    extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows above 5000%
-    high: "To infinity and beyond! 🚀💝",              // Shows above 1000%
-    normal: "And beyond! 🥰"                           // Shows above 100%
-}
-
-// Final Celebration
-celebration: {
-    title: "Yay! I'm the luckiest person...",     // Celebration title
-    message: "Now come get your gift...",          // Celebration message
-    emojis: "🎁💖🤗💝💋❤️💕"                        // Celebration emojis
-}
-
-// Website Colors
+// Trong config.js
 colors: {
-    backgroundStart: "#ffafbd",      // Background gradient start
-    backgroundEnd: "#ffc3a0",        // Background gradient end
-    buttonBackground: "#ff6b6b",     // Button color
-    buttonHover: "#ff8787",          // Button hover color
-    textColor: "#ff4757"            // Text color
-}
-
-// Animation Settings
-animations: {
-    floatDuration: "15s",           // How long hearts float (10-20s)
-    floatDistance: "50px",          // Sideways movement (30-70px)
-    bounceSpeed: "0.5s",            // Bounce animation speed (0.3-0.7s)
-    heartExplosionSize: 1.5         // Final heart explosion size (1.2-2.0)
-}
-
-// Music Settings
-music: {
-    enabled: true, // Music feature is enabled
-    autoplay: true, // Try to autoplay (note: some browsers may block this)
-    musicUrl: "YOUR_CLOUDINARY_URL_HERE", // Paste your music URL here
-    startText: "🎵 Play Music", // Button text to start music
-    stopText: "🔇 Stop Music", // Button text to stop music
-    volume: 0.5 // Volume level (0.0 to 1.0)
+    backgroundStart: "#your-color",
+    backgroundEnd: "#your-color",
+    buttonBackground: "#your-color",
+    buttonHover: "#your-color",
+    textColor: "#your-color"
 }
 ```
 
-### 3. Adding Your Own Background Music 🎵
-
-Want to make it extra special with your own romantic song? Follow these steps to add background music:
-
-1. **Get a Cloudinary Account (Free):**
-   - Go to [Cloudinary.com](https://cloudinary.com) and sign up for a free account
-
-2. **Upload Your Music:**
-   - Log in to your Cloudinary dashboard
-   - Click on the "Upload" button in the top right
-   - Select "Upload" from the dropdown menu
-   - Choose your MP3 file (keep it under 10MB for better loading)
-   - Wait for the upload to complete
-
-3. **Get Your Music URL:**
-   - After upload, find your music file in the Media Library
-   - Click the "..." (more options) button on your music file
-   - Click "Copy URL"
-   - Select "Copy Original URL with options"
-   - The URL should look like: `https://res.cloudinary.com/your-cloud-name/video/upload/v1234567890/your-file-name.mp3`
-
-4. **Add to Your Website:**
-   - Open `config.js`
-   - Find the `music` section
-   - Replace the `musicUrl` value with your Cloudinary URL
+#### Thay đổi animations:
 
 ```javascript
-music: {
-    enabled: true,
-    autoplay: true,
-    musicUrl: "YOUR_CLOUDINARY_URL_HERE", // Paste your URL here
-    startText: "🎵 Play Music",
-    stopText: "🔇 Stop Music",
-    volume: 0.5
+animations: {
+    floatDuration: "15s",      // Tốc độ bay
+    floatDistance: "50px",     // Khoảng cách bay
+    bounceSpeed: "0.5s",       // Tốc độ bounce
+    heartExplosionSize: 1.5    // Kích thước explosion
 }
 ```
 
-### 4. Make It Live! (Get your online website URL)
+### 🐛 Troubleshooting:
 
-#### Using GitHub Pages (Free)
-1. Go to your repository's "Settings"
-2. Click "Pages" in the left sidebar
-3. Under "Source", select "main" branch
-4. Click "Save"
-5. Wait a few minutes
-6. Your site will be live at: `https://your-username.github.io/repository-name`
+**Particles không hiển thị?**
 
-#### Using Netlify (Free, Recommended, Custom URL)
-1. Go to [Netlify](https://www.netlify.com/)
-2. Sign up for a free account
-3. Click "Add new site" → "Import an existing project"
-4. Choose your GitHub repository
-5. Click "Deploy site"
-6. Once deployed, click "Domain settings"
-7. Choose a custom domain (e.g., `my-valentine-2025.netlify.app`)
+- Kiểm tra Three.js CDN link
+- Clear cache browser
 
-## 💡 Tips
-- Test the website before sending it to your Valentine
-- Try all the buttons and interactions
-- Check how it looks on mobile phones
+**Confetti không hoạt động?**
 
-## 🎨 Want Different Colors?
-Use these tools to find beautiful colors:
-- [Coolors](https://coolors.co/) - Color palette generator
-- [ColorHunt](https://colorhunt.co/) - Color palettes
+- Kiểm tra confetti.js đã load
+- Check console errors
 
-## 🔍 Need More Emojis?
-Find more emojis at:
-- [EmojiKeyboard](https://emojikeyboard.top/fr/)
-- [Emojipedia](https://emojipedia.org/)
+**Music không tự chạy?**
 
-## 💖 Credits
-Created with love for Valentine's Day 2026.
-Feel free to use and modify for your special someone!
+- Browser block autoplay
+- User phải click để enable
 
-\- Louis Fontaine -
+**Mobile layout vỡ?**
 
-## ❤️ Support this project
+- Check viewport meta tag
+- Test responsive breakpoints
 
-This Valentine website template is completely **free and open-source**.
+### 📞 Support:
 
-If it helped you create something special, you can support the project with a small donation:
+Nếu cần hỗ trợ:
 
-👉 [Tip](https://buy.stripe.com/bJefZa8Le7fvgDe3ric7u00)
+1. Check browser console (F12)
+2. Verify all files uploaded
+3. Test on different browsers
 
-Thank you for keeping it alive!
+### ❤️ Made with Love
 
-## 📜 License
-MIT License - Feel free to use this for your Valentine! 
+Phiên bản nâng cấp này được tạo ra với tình yêu và sự tỉ mỉ để làm cho ngày Valentine của bạn thật đặc biệt!
+
+**Chúc bạn và người ấy có một Valentine thật hạnh phúc! 💝**
+
+---
+
+_Created by Claude - Enhanced Premium Edition 2026_

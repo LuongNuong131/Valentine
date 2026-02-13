@@ -1,77 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CUSTOMIZE: Browser tab title -->
-    <title>Will You Be My Valentine? 💝</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Làm Valentine của anh nha? 💝</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Three.js for particles -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-content">
+        <div class="heart-loader">
+          <div class="heart-pulse">💝</div>
+        </div>
+        <p class="loading-text">Đang chuẩn bị điều đặc biệt...</p>
+      </div>
+    </div>
+
+    <!-- 3D Particles Background -->
+    <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+
     <!-- Floating Background Elements -->
-    <div class="floating-elements">
-        <!-- Hearts and bears will be added here by JavaScript -->
+    <div class="floating-elements" id="floatingElements">
+      <!-- Hearts and bears will be added here by JavaScript -->
     </div>
 
     <!-- Main Content Container -->
-    <div class="container">
-        <h1 id="valentineTitle"></h1>
-        
-        <!-- Music Player -->
-        <div id="musicControls" class="music-controls">
-            <button id="musicToggle" class="music-btn">🎵 Play Music</button>
-            <audio id="bgMusic" loop>
-                <source id="musicSource" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+    <div class="container" id="mainContainer">
+      <!-- Music Player -->
+      <div class="music-controls" id="musicControls">
+        <button class="music-btn" id="musicToggle">
+          <span class="music-icon">🎵</span>
+          <span class="music-text">Bật nhạc</span>
+        </button>
+        <audio id="bgMusic" loop>
+          <source id="musicSource" type="audio/mpeg" />
+        </audio>
+      </div>
+
+      <!-- Title -->
+      <h1 class="main-title" id="valentineTitle">
+        <span class="title-line">Trúc My,</span>
+        <span class="title-line">tình yêu của anh...</span>
+      </h1>
+
+      <!-- First Question -->
+      <div class="question-section active" id="question1" data-aos="fade-up">
+        <div class="question-card">
+          <h2 class="question-text" id="question1Text">Bé có yêu anh hông?</h2>
+          <div class="button-group">
+            <button class="cute-btn primary-btn" id="yesBtn1">
+              <span class="btn-text">Dạ có ❤️</span>
+              <span class="btn-shine"></span>
+            </button>
+            <button class="cute-btn secondary-btn" id="noBtn1">
+              <span class="btn-text">Hông 🥺</span>
+              <span class="btn-shine"></span>
+            </button>
+          </div>
         </div>
 
-        <!-- First Question -->
-        <div class="question-section" id="question1">
-            <h2 id="question1Text"></h2>
-            <button class="cute-btn" onclick="moveButton(this)" id="yesBtn1"></button>
-            <button class="cute-btn" onclick="moveButton(this)" id="noBtn1"></button>
-            <!-- CUSTOMIZE: Secret answer text -->
-            <div class="secret-answer">
-                <button class="cute-btn special" onclick="showNextQuestion(2)" id="secretAnswerBtn"></button>
+        <!-- Secret Answer Button -->
+        <div class="secret-answer" id="secretAnswer">
+          <button class="cute-btn special-btn" id="secretAnswerBtn">
+            <span class="btn-text"
+              >Hông yêu mà là thương lắm lắm đúng hông! ❤️</span
+            >
+            <span class="btn-shine"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Question (Love Meter) -->
+      <div class="question-section" id="question2" data-aos="fade-up">
+        <div class="question-card">
+          <h2 class="question-text" id="question2Text">Yêu nhiều hông dạ?</h2>
+
+          <div class="love-meter-container">
+            <div class="love-meter-wrapper">
+              <input
+                type="range"
+                min="0"
+                max="10000"
+                value="100"
+                class="slider"
+                id="loveMeter"
+              />
+              <div class="slider-track"></div>
+              <div class="slider-progress" id="sliderProgress"></div>
             </div>
-        </div>
 
-        <!-- Second Question (Love Meter) -->
-        <div class="question-section hidden" id="question2">
-            <h2 id="question2Text"></h2>
-            <!-- Love meter settings: min="0" max="10000" -->
-            <div class="love-meter">
-                <input type="range" min="0" max="10000" value="100" class="slider" id="loveMeter">
-                <p>
-                    <span class="love-value-container"><span id="startText"></span> (<span id="loveValue">100</span>%)</span>
-                    <span id="extraLove" class="hidden"></span>
-                </p>
+            <div class="love-display">
+              <p class="love-text">
+                <span class="love-label" id="startText">Nhiêu đây nè!</span>
+                <span class="love-percentage">
+                  <span class="love-number" id="loveValue">100</span>
+                  <span class="percent-sign">%</span>
+                </span>
+              </p>
+              <p class="extra-love" id="extraLove"></p>
             </div>
-            <button class="cute-btn" onclick="showNextQuestion(3)" id="nextBtn"></button>
-        </div>
+          </div>
 
-        <!-- Final Question -->
-        <div class="question-section hidden" id="question3">
-            <h2 id="question3Text"></h2>
-            <button class="cute-btn final-yes" onclick="celebrate()" id="yesBtn3"></button>
-            <button class="cute-btn" onclick="moveButton(this)" id="noBtn3"></button>
+          <button class="cute-btn primary-btn" id="nextBtn">
+            <span class="btn-text">Tiếp theo ❤️</span>
+            <span class="btn-shine"></span>
+          </button>
         </div>
+      </div>
 
-        <!-- CUSTOMIZE: Celebration message -->
-        <div class="celebration hidden" id="celebration">
-            <h2 id="celebrationTitle"></h2>
-            <p class="celebration-text" id="celebrationMessage"></p>
-            <p class="celebration-text" id="celebrationEmojis"></p>
+      <!-- Final Question -->
+      <div class="question-section" id="question3" data-aos="fade-up">
+        <div class="question-card">
+          <h2 class="question-text final-question" id="question3Text">
+            Vậy... làm Valentine của anh nha?
+            <span class="date-tag">14/02/2026 🌹</span>
+          </h2>
+          <div class="button-group">
+            <button class="cute-btn primary-btn final-yes-btn" id="yesBtn3">
+              <span class="btn-text">Đồng ý lun!</span>
+              <span class="btn-shine"></span>
+            </button>
+            <button class="cute-btn secondary-btn" id="noBtn3">
+              <span class="btn-text">Để suy nghĩ...</span>
+              <span class="btn-shine"></span>
+            </button>
+          </div>
         </div>
+      </div>
+
+      <!-- Celebration -->
+      <div class="celebration" id="celebration">
+        <div class="celebration-content" data-aos="zoom-in">
+          <div class="celebration-icon">🎉</div>
+          <h2 class="celebration-title" id="celebrationTitle">
+            Yayy! Anh biết mà!<br />Yêu vợ nhiều lắm lắm! 🎉💝💖
+          </h2>
+          <p class="celebration-message" id="celebrationMessage">
+            Cảm ơn bé đã đến bên anh.<br />Valentine vui vẻ nha tình yêu của
+            anh! 😘
+          </p>
+          <div class="celebration-emojis" id="celebrationEmojis">
+            🎁💖🤗💝💋❤️💕
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Confetti Container -->
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
     <!-- Scripts -->
     <script src="config.js"></script>
     <script src="theme.js"></script>
+    <script src="particles.js"></script>
+    <script src="confetti.js"></script>
     <script src="script.js"></script>
-</body>
-</html> 
+  </body>
+</html>

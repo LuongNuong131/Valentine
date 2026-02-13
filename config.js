@@ -21,7 +21,8 @@ const CONFIG = {
       text: "Bé có yêu anh hông?",
       yesBtn: "Dạ có ❤️",
       noBtn: "Hông 🥺",
-      secretAnswer: "Hông yêu mà là thương lắm lắm đúng hông! ❤️",
+      // Nút mờ ở góc dưới - khi click cũng chuyển sang câu hỏi tiếp theo
+      secretAnswer: "Hông yêu... mà là THƯƠNG lắm lắm! ❤️",
     },
     second: {
       text: "Yêu nhiều hông dạ?",
