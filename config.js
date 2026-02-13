@@ -78,15 +78,15 @@ const CONFIG = {
   },
 
   // Hình ảnh của cả 2
-  photos: {
-    enabled: true, // Bật/tắt hiển thị ảnh
-    couple: "couple.jpg", // Ảnh của cả 2 (đặt cùng folder với index.html)
-    // Có thể thêm ảnh riêng của từng người (optional)
-    boy: "", // Để trống nếu không dùng
-    girl: "", // Để trống nếu không dùng
-    // Vị trí hiển thị: 'top' (trên title) hoặc 'celebration' (ở trang chúc mừng)
-    position: "celebration",
-  },
-};
+//   photos: {
+//     enabled: true, // Bật/tắt hiển thị ảnh
+//     couple: "couple.jpg", // Ảnh của cả 2 (đặt cùng folder với index.html)
+//     // Có thể thêm ảnh riêng của từng người (optional)
+//     boy: "", // Để trống nếu không dùng
+//     girl: "", // Để trống nếu không dùng
+//     // Vị trí hiển thị: 'top' (trên title) hoặc 'celebration' (ở trang chúc mừng)
+//     position: "celebration",
+//   },
+// };
 
 window.VALENTINE_CONFIG = CONFIG;
