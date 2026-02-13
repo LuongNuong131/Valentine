@@ -70,11 +70,22 @@ const CONFIG = {
   // Nhạc nền
   music: {
     enabled: true,
-    autoplay: true,
-    musicUrl: "Beautiful in white.mp3",
+    autoplay: false, // Đổi thành false vì browser thường block autoplay
+    musicUrl: "Beautiful in white.mp3", // Đặt file nhạc cùng folder với index.html
     startText: "🎵 Bật nhạc",
     stopText: "🔇 Tắt nhạc",
     volume: 0.5,
+  },
+
+  // Hình ảnh của cả 2
+  photos: {
+    enabled: true, // Bật/tắt hiển thị ảnh
+    couple: "couple.jpg", // Ảnh của cả 2 (đặt cùng folder với index.html)
+    // Có thể thêm ảnh riêng của từng người (optional)
+    boy: "", // Để trống nếu không dùng
+    girl: "", // Để trống nếu không dùng
+    // Vị trí hiển thị: 'top' (trên title) hoặc 'celebration' (ở trang chúc mừng)
+    position: "celebration",
   },
 };
 

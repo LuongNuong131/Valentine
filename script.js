@@ -73,6 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
   setupEventListeners();
 
   initializeLoveMeter();
+
+  // Initialize photo gallery
+  initializePhotoGallery();
 });
 
 // Set page content from config
@@ -347,13 +350,54 @@ function setupMusicPlayer() {
 
   musicToggle.addEventListener("click", () => {
     if (bgMusic.paused) {
-      bgMusic.play();
-      musicText.textContent = config.music.stopText.replace("🔇 ", "");
+      bgMusic
+        .play()
+        .then(() => {
+          musicText.textContent = config.music.stopText.replace("🔇 ", "");
+        })
+        .catch((error) => {
+          console.log("Music play failed:", error);
+          alert("Vui lòng nhấn nút để bật nhạc nhé! 🎵");
+        });
     } else {
       bgMusic.pause();
       musicText.textContent = config.music.startText.replace("🎵 ", "");
     }
   });
+}
+
+// Photo Gallery Setup
+function initializePhotoGallery() {
+  if (!config.photos || !config.photos.enabled) {
+    return;
+  }
+
+  const photoGallery = document.getElementById("photoGallery");
+  const couplePhoto = document.getElementById("couplePhoto");
+
+  if (!photoGallery || !couplePhoto) {
+    return;
+  }
+
+  // Check if photo file exists
+  if (config.photos.couple && config.photos.couple.trim() !== "") {
+    couplePhoto.src = config.photos.couple;
+
+    // Show photo when image loads successfully
+    couplePhoto.onload = function () {
+      photoGallery.style.display = "block";
+    };
+
+    // Hide if image fails to load
+    couplePhoto.onerror = function () {
+      console.log(
+        "Photo not found. Make sure to place your photo in the same folder as index.html",
+      );
+      photoGallery.style.display = "none";
+    };
+  } else {
+    photoGallery.style.display = "none";
+  }
 }
 
 // Add shake animation to CSS dynamically
