@@ -70,7 +70,7 @@ const CONFIG = {
   // Nhạc nền
   music: {
     enabled: true,
-    autoplay: false, // Đổi thành false vì browser thường block autoplay
+    autoplay: true, // Đổi thành false vì browser thường block autoplay
     musicUrl: "Beautiful in white.mp3", // Đặt file nhạc cùng folder với index.html
     startText: "🎵 Bật nhạc",
     stopText: "🔇 Tắt nhạc",
