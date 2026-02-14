@@ -46,7 +46,7 @@ const CONFIG = {
   celebration: {
     title: "Yayy! Anh biết mà! Yêu vợ nhiều lắm lắm! 🎉💝💖",
     message:
-      "Cảm ơn bé đã đến bên anh. Valentine vui vẻ nha tình yêu của anh! 😘",
+      "Cảm ơn bé đã đến bên anh. Chúc em thật mãi xinh đẹp, làm việc suôn sẻ. Mong em đừng bao giờ rời xa anh nhó. Valentine vui vẻ nha tình yêu của anh! 😘",
     emojis: "🎁💖🤗💝💋❤️💕",
   },
 
@@ -78,15 +78,15 @@ const CONFIG = {
   },
 
   // Hình ảnh của cả 2
-//   photos: {
-//     enabled: true, // Bật/tắt hiển thị ảnh
-//     couple: "couple.jpg", // Ảnh của cả 2 (đặt cùng folder với index.html)
-//     // Có thể thêm ảnh riêng của từng người (optional)
-//     boy: "", // Để trống nếu không dùng
-//     girl: "", // Để trống nếu không dùng
-//     // Vị trí hiển thị: 'top' (trên title) hoặc 'celebration' (ở trang chúc mừng)
-//     position: "celebration",
-//   },
-// };
+  // photos: {
+  //   enabled: true, // Bật/tắt hiển thị ảnh
+  //   couple: "couple.jpg", // Ảnh của cả 2 (đặt cùng folder với index.html)
+  //   // Có thể thêm ảnh riêng của từng người (optional)
+  //   boy: "", // Để trống nếu không dùng
+  //   girl: "", // Để trống nếu không dùng
+  //   // Vị trí hiển thị: 'top' (trên title) hoặc 'celebration' (ở trang chúc mừng)
+  //   position: "top",
+  // },
+};
 
 window.VALENTINE_CONFIG = CONFIG;

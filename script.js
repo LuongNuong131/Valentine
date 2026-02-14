@@ -162,11 +162,17 @@ function setRandomPosition(element) {
 
 // Setup event listeners
 function setupEventListeners() {
+  // Yes button 1 - should go to next question
+  // document.getElementById("yesBtn1").addEventListener("click", function (e) {
+  //   e.preventDefault();
+  //   showNextQuestion(2);
+  // });
   document.getElementById("yesBtn1").addEventListener("click", function (e) {
     e.preventDefault();
     moveButton(this);
   });
 
+  // No button 1 - runs away
   document.getElementById("noBtn1").addEventListener("click", function (e) {
     e.preventDefault();
     moveButton(this);
